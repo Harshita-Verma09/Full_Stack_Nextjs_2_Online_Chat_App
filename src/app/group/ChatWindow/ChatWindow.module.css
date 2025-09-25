@@ -1,0 +1,283 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px;
+}
+
+.dateSeparator {
+    text-align: center;
+    margin: 10px 0;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.messageRow {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.messageBubble {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 16px;
+    word-break: break-word;
+    position: relative;
+}
+
+.own {
+    justify-content: flex-end;
+}
+
+.ownBubble {
+    background-color: #7c3aed;
+    color: #fff;
+}
+
+.otherBubble {
+    background-color: #f1f1f1;
+    color: #000;
+}
+
+/* Timestamp inside bubble */
+.timestamp {
+    font-size: 0.7rem;
+    margin-top: 2px;
+    text-align: right;
+    opacity: 0.7;
+}
+
+/* DARK MODE */
+.dark .dateSeparator {
+    color: #ccc;
+}
+
+.dark .otherBubble {
+    background-color: #3a3b3c;
+    color: #e4e6eb;
+}
+
+.dark .ownBubble {
+    background-color: #8b5cf6;
+    color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .messageBubble {
+        max-width: 85%;
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    height: 100%;
+    background-color: #f9f9f9;
+    /* Light mode background */
+    transition: background-color 0.3s ease;
+}
+
+.dark {
+    background-color: #1e1e1e;
+    /* Dark mode background */
+}
+
+.dateSeparator {
+    text-align: center;
+    margin: 10px 0;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.messageRow {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.own {
+    justify-content: flex-end;
+}
+
+.messageBubble {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 16px;
+    word-break: break-word;
+}
+
+.ownBubble {
+    background-color: #7c3aed;
+    /* your existing own bubble color */
+    color: #fff;
+}
+
+.otherBubble {
+    background-color: #f1f1f1;
+    /* your existing other bubble color */
+    color: #000;
+}
+
+.timestamp {
+    font-size: 0.7rem;
+    margin-top: 2px;
+    text-align: right;
+    opacity: 0.7;
+
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: inherit;
+     overflow-y: hidden; /* scroll bar hide karne ke liye */
+    /* inherit from ChatArea */
+}
+
+.dark {
+    background-color: inherit;
+    /* already inherited */
+}
+
+.messageRow {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.own {
+    justify-content: flex-end;
+}
+
+.messageBubble {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 16px;
+    word-break: break-word;
+    font-size: 1.2rem;
+}
+
+.ownBubble {
+    background-color: #7c3aed;
+    /* your own bubble */
+    color: #fff;
+    font-size: large;
+    padding: 10px 20px;
+}
+
+.otherBubble {
+    background-color: #f1f1f1;
+    /* light other */
+    color: #000;
+}
+
+.dark .otherBubble {
+    background-color: #333;
+    /* dark other bubble */
+    color: #fff;
+}
+
+.dateSeparator {
+    text-align: center;
+    margin: 10px 0;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.timestamp {
+    font-size: 0.7rem;
+    margin-top: 2px;
+    text-align: right;
+    opacity: 0.7;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: auto;
+    height: 100%;
+    background-color: #f9f9f9;
+    /* Light mode background */
+    transition: background-color 0.3s;
+}
+
+/* Dark mode container */
+.dark {
+    background-color: #232324;
+    /* Dark mode background */
+}
+
+/* Date separator */
+.dateSeparator {
+    display: flex;
+    /* Use flex for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically inside the pill */
+    padding: 15px 17px;
+    margin: 15px 0;
+    background-color: #7c3aed;
+    border: #fffbfb 2px solid;
+    color: #fff;
+    /* White text */
+    font-weight: bold;
+    border-radius: 12px;
+    width: fit-content;
+    /* Shrink to content width */
+    margin-left: auto;
+    /* Center horizontally */
+    margin-right: auto;
+    /* Center horizontally */
+    transition: background-color 0.3s;
+    font-size: medium;
+}
+
+
+/* Message row */
+.messageRow {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.own {
+    justify-content: flex-end;
+}
+
+.messageBubble {
+    padding: 8px 12px;
+    border-radius: 15px;
+    max-width: 70%;
+    position: relative;
+}
+
+/* Sender bubbles */
+.ownBubble {
+    background-color: #7c3aed;
+    color: #fff;
+
+}
+
+.otherBubble {
+    background-color: #e4e6eb;
+    color: #000;
+}
+
+/* Timestamp inside bubble */
+.timestamp {
+    font-size: 1rem;
+    margin-top: 4px;
+    text-align: right;
+    opacity: 0.7;
+}

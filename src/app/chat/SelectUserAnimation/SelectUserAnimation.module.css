@@ -1,0 +1,56 @@
+/* src/app/chat/SelectUserAnimation.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 2rem;
+    color: #555;
+}
+
+.monkey {
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    position: relative;
+}
+
+.hand {
+    display: inline-block;
+    margin-left: 0.3rem;
+    animation: wave 1s infinite;
+    transform-origin: bottom center;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    75% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+
+
+
+
+
+

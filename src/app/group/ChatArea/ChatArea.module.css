@@ -1,0 +1,76 @@
+/*  */
+
+
+.messages {
+  flex: 1;
+  overflow-y: hidden;
+  /* scroll bar hide karne ke liye */
+  padding: 10px;
+}
+
+.inputContainer {
+  position: sticky;
+  bottom: 0;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: inherit;
+}
+
+.dark .inputContainer {
+  border-top: 1px solid #444;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff;
+  /* pure white for light mode */
+  color: #000000;
+}
+
+.dark {
+  background-color: #1e1e1e;
+  /* dark background */
+  color: #fff;
+}
+
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff;
+  /* light mode background */
+  color: #000000;
+   overflow-y: hidden; /* scroll bar hide karne ke liye */
+}
+
+.dark {
+  background-color: #1e1e1e;
+  /* dark mode background */
+  color: #fff;
+}
+
+/* Messages container */
+.messages {
+  flex: 1;
+  overflow-y: hidden; /* scroll bar hide karne ke liye */
+  padding: 10px;
+}
+
+/* Input container fixed at bottom */
+.inputContainer {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #ffffff;
+  /* light mode input bg */
+  transition: background-color 0.3s;
+}
+
+.dark .inputContainer {
+  background-color: #2b2b2b;
+  /* dark mode input bg */
+}

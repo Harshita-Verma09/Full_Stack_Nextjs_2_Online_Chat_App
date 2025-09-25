@@ -1,0 +1,136 @@
+.container {
+    width: 280px;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    box-sizing: border-box;
+    /* include padding in width */
+    overflow-x: hidden;
+    /* prevent horizontal scroll */
+    overflow-y: auto;
+    /* allow vertical scroll if needed */
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0e0e0e;
+    /* light mode text color */
+    transition: color 0.3s;
+}
+
+/* Dark mode override */
+.dark .title {
+    color: #ffffff;
+    /* dark mode text color */
+}
+
+
+.noGroups {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+}
+
+.groupItem {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #e8e8e8;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    word-break: break-word;
+    /* wrap long names */
+}
+
+.groupItem:hover {
+    background-color: #d1e7ff;
+    transform: translateY(-2px);
+}
+
+.selected {
+    background-color: #7c3aed;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode (example) */
+.container.dark {
+    background-color: #1f1f1f;
+}
+
+.container.dark .groupItem {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.container.dark .groupItem:hover {
+    background-color: #3a3a3a;
+}
+
+.container.dark .selected {
+    background-color: #7c3aed;
+    color: #fff;
+}
+
+.container {
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+.dark {
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+
+.container {
+    width: 300px;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    /* light mode */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark {
+    background-color: #1e1e1e;
+    /* dark mode */
+    color: #fff;
+}
+
+
+.noGroups {
+    text-align: center;
+    color: #888;
+}
+
+.groupItem {
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    background-color: #f1f1f1;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark .groupItem {
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+.selected {
+    background-color: #ae83f7;
+    color: #fff;
+}

@@ -1,0 +1,99 @@
+// generator client {
+//     provider = "prisma-client-js"
+// }
+
+// datasource db {
+//     provider = "mongodb"
+//     url      = env("DATABASE_URL")
+// }
+
+// model User {
+//     id           String    @id @default(auto()) @map("_id") @db.ObjectId
+//     username     String
+//     email        String    @unique
+//     password     String
+//     isVerified   Boolean   @default(false)
+//     otp          String?
+//     otpExpiresAt DateTime? // OTP expiry time
+//     createdAt    DateTime  @default(now())
+//     updatedAt    DateTime  @updatedAt
+
+//     //  OTP limiting fields
+//     otpRequestCount Int       @default(0) // ek din me kitni baar OTP bheja
+//     otpLastSentAt   DateTime? // last OTP bhejne ka time
+//     Message         Message[]
+// }
+
+// model Chat {
+//     id             String    @id @default(auto()) @map("_id") @db.ObjectId
+//     participantIds String[]
+//     isGroup        Boolean   @default(false)
+//     createdAt      DateTime  @default(now())
+//     updatedAt      DateTime  @updatedAt
+//     messages       Message[] @relation("ChatMessages")
+//     groupName      String?
+//     adminId        String?   @db.ObjectId // Only for groups
+// }
+
+// model Message {
+//     id        String   @id @default(auto()) @map("_id") @db.ObjectId
+//     chatId    String   @db.ObjectId
+//     senderId  String   @db.ObjectId
+//     text      String
+//     createdAt DateTime @default(now())
+//     sender    User     @relation(fields: [senderId], references: [id])
+//     chat      Chat     @relation("ChatMessages", fields: [chatId], references: [id])
+// }
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+    id           String    @id @default(auto()) @map("_id") @db.ObjectId
+    username     String
+    email        String    @unique
+    password     String
+    isVerified   Boolean   @default(false)
+    otp          String?
+    otpExpiresAt DateTime? // OTP expiry time
+    createdAt    DateTime  @default(now())
+    updatedAt    DateTime  @updatedAt
+
+    // OTP limiting fields
+    otpRequestCount Int       @default(0) // ek din me kitni baar OTP bheja
+    otpLastSentAt   DateTime? // last OTP bhejne ka time
+
+    // Relations
+    messages Message[]
+}
+
+model Chat {
+    id             String   @id @default(auto()) @map("_id") @db.ObjectId
+    participantIds String[] // list of User IDs (ObjectId in string format)
+    isGroup        Boolean  @default(false)
+    groupName      String? // only for groups
+    adminId        String?  @db.ObjectId // only for groups
+    createdAt      DateTime @default(now())
+    updatedAt      DateTime @updatedAt
+
+    // Relations
+    messages Message[] @relation("ChatMessages")
+}
+
+model Message {
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    chatId    String   @db.ObjectId
+    senderId  String   @db.ObjectId
+    text      String
+    createdAt DateTime @default(now())
+
+    // Relations
+    sender User @relation(fields: [senderId], references: [id])
+    chat   Chat @relation("ChatMessages", fields: [chatId], references: [id])
+}

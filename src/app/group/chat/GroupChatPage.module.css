@@ -1,0 +1,81 @@
+/* Container for entire page */
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f5f5;
+  /* light mode background */
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.dark {
+  background-color: #1e1e1e;
+  /* dark mode background */
+  color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+  /* matches container background */
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.headerButton {
+  padding: 5px 12px;
+  margin-right: 5px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #7c3aed;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.dark .headerButton {
+  background-color: #7c3aed;
+  color: #fff;
+}
+
+.headerButton:hover {
+  opacity: 0.85;
+}
+
+/* Chat container */
+.chatContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+}
+
+/* Admin controls (Add/Remove) */
+.adminControls {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  background-color: inherit;
+}
+
+/* Chat window area */
+.chatWindow {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: inherit;
+}
