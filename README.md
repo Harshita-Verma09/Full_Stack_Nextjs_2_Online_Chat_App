@@ -220,9 +220,9 @@ server.listen(PORT, () => {
 ---
 
 ## Why Prisma, Zod, TypeScript in UI?
-- **Prisma: Used for type-safe, fast, and scalable database access. It simplifies data modeling, migrations, and querying MongoDB, ensuring consistency and reliability.
+- Prisma: Used for type-safe, fast, and scalable database access. It simplifies data modeling, migrations, and querying MongoDB, ensuring consistency and reliability.
 
-- **Zod: Used for runtime validation and type inference of API inputs/outputs. It helps catch errors early, validates user data, and improves security by enforcing strict schemas.
+- Zod: Used for runtime validation and type inference of API inputs/outputs. It helps catch errors early, validates user data, and improves security by enforcing strict schemas.
 
-- **TypeScript: Used for type safety across the entire codebase. It reduces bugs, improves developer experience, and makes refactoring easier. In the UI, it ensures props, state, and API responses are always correct.
+- TypeScript: Used for type safety across the entire codebase. It reduces bugs, improves developer experience, and makes refactoring easier. In the UI, it ensures props, state, and API responses are always correct.
 
