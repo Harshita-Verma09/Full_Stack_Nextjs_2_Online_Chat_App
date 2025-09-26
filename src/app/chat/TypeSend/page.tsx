@@ -1,5 +1,4 @@
 // // src\app\chat\TypeSend\page.tsx
-
 "use client";
 import { useState, useEffect } from "react";
 import socket from "@/app/lib/socket";
