@@ -1,6 +1,6 @@
 ##  Real Time Chat Application 
 
-A modern, secure, real-time chat application built with Next.js, Socket.IO, and Prisma. This app supports private and group chats, OTP authentication, voice-to-text, online status, and more..
+A modern, secure, real-time chat application built with Next.js, Socket.IO, MongoDB and Prisma. This app supports private and group chats, OTP authentication, voice-to-text, online status, Light-and-Dark Mode, Delete from Me and more..
 
 ---
 
